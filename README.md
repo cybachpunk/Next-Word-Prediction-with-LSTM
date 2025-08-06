@@ -24,7 +24,7 @@ Model Persistence: The trained model and tokenizer are saved to disk, allowing t
 
 The script downloads the text of Emma and saves it locally. The text is tokenized, mapping each unique word to an integer. The entire text is converted into overlapping n-gram sequences. For example, the line "to be or not to be" becomes ['to', 'be'], ['to', 'be', 'or'], ['to', 'be', 'or', 'not'], and so on. These sequences are padded with leading zeros to ensure they are all of a uniform length. The sequences are split into features (X) and labels (y). For each sequence, X is all words except the last, and y is the last word.
 
-Zero padding and n-gram smoothing or backoff mitigations could be used in future examples as Emma is, while beautiful on its own, categorized as a classical literature piece. For this use case, and this training data, the prediction use case should be other similar titles released around the same time period.
+Zero padding and n-gram smoothing or backoff mitigations could be used in future examples as Emma is, while beautiful on its own, categorized as a classical literature piece. For this use case, and this training data, the prediction should for other similar titles released around the same time period or written the same way.
 
 This example can be further extrapolated into training data sets with a focus in a specific domain area. For example, you wouldn't expect a training data set based on Dr. Suessi libraries to be able to predict next word probability for Biomedical companies. To achieve these goals, the next step may be utilizing larger training datasets and/or LLM integration with MCP architecture.
 
